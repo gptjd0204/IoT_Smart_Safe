@@ -154,4 +154,50 @@ API Gateway에서 다음과 같이 RestAPI 생성<br/>
 
 ## 5. Android
 
+### 1. UI Java Code
 
+**1) MainActivity**<br/>
+  - 안드로이드 홈 화면
+  - 버튼을 클릭하면 다음 Activity에 RestAPI URL 전달
+  
+![androidHome](https://user-images.githubusercontent.com/71610969/101994269-8a09e580-3d04-11eb-87c0-229a8b469818.PNG)
+<br/> [Smart_Safe 홈 화면]<br/><br/>
+
+**2) DeviceActivity.java** <br/>
+  - 금고 충격 감지 제어 화면
+  - 조회 시작을 누르면 현재 금고에 충격 감지 실행 정보를 표시
+  - 실행을 누르면 충격 감지를 실행, 중지를 누르면 충격 감지 중지
+
+![androidShockRun](https://user-images.githubusercontent.com/71610969/101994482-18cb3200-3d06-11eb-815d-46e9c21d984e.PNG)
+<br/> [충격 감지 제어 화면]<br/><br/>
+![androidShockRunStop](https://user-images.githubusercontent.com/71610969/101994523-42845900-3d06-11eb-9d0c-7923c759817c.PNG)
+<br/> [조회 시작 클릭 시]<br/><br/>
+![안드로이드 실행중](https://user-images.githubusercontent.com/71610969/101994534-592ab000-3d06-11eb-8258-5161bfd14bb2.PNG)
+<br/> [실행 클릭 시]<br/><br/>
+
+**3) OpenLogActivity.java, ShockLogActivity.java** <br/>
+  - 금고 여닫힘 시간 조회 및 충격 발생 시간 조회 화면
+  - Day를 누르면 일별로 시간을 조회, Month를 누르면 월별로 시간을 조회
+![금고 여닫힘 조회](https://user-images.githubusercontent.com/71610969/101994663-6005f280-3d07-11eb-9630-4a6a8e88d7e2.PNG)
+<br/> [금고 여닫힘 시간 조회]<br/><br/>
+![충격 발생 로그 조회](https://user-images.githubusercontent.com/71610969/101994680-78760d00-3d07-11eb-9c41-cbd771b52640.PNG)
+<br/> [충격 발생 시간 조회]<br/><br/>
+
+**4) MyYearMonthPickerDialog.java** <br/>
+  - 년도와 월만 선택할 수 있는 DatePickerDialog
+  - 월별 시간 조회를 하기 위해 생성
+
+<br/>
+
+### 2. apicall Java Code
+
+**1) GetThingShadow.java**<br/>
+  - API URL에서 얻어온 json 코드를 바탕으로 충격 감지 실행 상태 확인
+  
+**2) UpdateShadow.java**<br/>
+  - 앱에서 API URL을 통해 AWS에 DeviceShadow를 변경시켜 충격 감지 상태 변경
+  
+**3) GetOpenLog.java, GetShockLog.java**<br/>
+  - API URL에서 얻어온 json 코드를 바탕으로 OpenLogging과 ShockLogging 데이터 조회
+  
+<br/>
