@@ -33,7 +33,7 @@ public class GetOpenLog extends GetRequest {
             TextView textView_Open_Date1 = activity.findViewById(R.id.textView_open_date1);
             TextView textView_Open_Date2 = activity.findViewById(R.id.textView_open_date2);
             // 사용자가 설정한 날짜에 발생한 금고 여닫힘 로그 조회
-            String params = String.format("?from=%s:00&to=%s:00",textView_Open_Date1.getText().toString(),
+            String params = String.format("?from=%s&to=%s",textView_Open_Date1.getText().toString(),
                     textView_Open_Date2.getText().toString());
 
             Log.i(TAG,"urlStr="+urlStr+params);

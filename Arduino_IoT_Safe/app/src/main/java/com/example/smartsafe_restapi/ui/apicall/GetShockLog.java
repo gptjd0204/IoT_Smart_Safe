@@ -32,7 +32,7 @@ public class GetShockLog extends GetRequest {
             TextView textView_Shock_Date1 = activity.findViewById(R.id.textView_shock_date1);
             TextView textView_Shock_Date2 = activity.findViewById(R.id.textView_shock_date2);
             // 사용자가 설정한 날짜에 발생한 충격 발생 시간 로그 조회
-            String params = String.format("?from=%s:00&to=%s:00",textView_Shock_Date1.getText().toString(),
+            String params = String.format("?from=%s&to=%s",textView_Shock_Date1.getText().toString(),
                     textView_Shock_Date2.getText().toString());
 
             Log.i(TAG,"urlStr="+urlStr+params);
