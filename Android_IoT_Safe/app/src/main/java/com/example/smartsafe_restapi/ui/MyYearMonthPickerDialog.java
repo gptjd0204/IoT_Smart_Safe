@@ -60,7 +60,7 @@ public class MyYearMonthPickerDialog extends DialogFragment {
         btnConfirm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                listener.onDateSet(null, yearPicker.getValue(), monthPicker.getValue(), 0);
+                listener.onDateSet(null, yearPicker.getValue(), monthPicker.getValue(), 1);
                 MyYearMonthPickerDialog.this.getDialog().cancel();
             }
         });
