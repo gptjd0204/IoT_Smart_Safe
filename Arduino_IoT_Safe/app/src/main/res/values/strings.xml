@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Smart_Safe</string>
+    <string name="device_state">스마트 금고 충격 감지</string>
+    <string name="temp">온도(c): </string>
+    <string name="led">LED 상태: </string>
+    <string name="shockrun">충격감지 : </string>
+    <string name="menu">Smart Safe MENU</string>
+    <string name="cancel">취소</string>
+    <string name="confirm">확인</string>
+</resources>
