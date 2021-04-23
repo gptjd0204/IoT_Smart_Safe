@@ -26,9 +26,9 @@ public class ShockSNSHandler implements RequestHandler<Object, String> {
 	    String shock = reported.getAsJsonObject().get("SHOCK").getAsString();
 	    //String shock = reported.getAsJsonObject().get("SHOCK_RUN").getAsString();
 
-	    final String AccessKey="AKIA2FW542NPQIAYNJHR";
-	    final String SecretKey="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";
-	    final String topicArn="arn:aws:sns:ap-northeast-2:699471287135:shock_warning_topic";
+	    final String AccessKey="";
+	    final String SecretKey="";
+	    final String topicArn="";
 
 	    BasicAWSCredentials awsCreds = new BasicAWSCredentials(AccessKey, SecretKey);  
 	    AmazonSNS sns = AmazonSNSClientBuilder.standard()
